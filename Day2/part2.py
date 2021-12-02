@@ -7,7 +7,7 @@ class Part2(Solver):
         self.depth: int = 0
         self.aim: int = 0
 
-    def process(self, input: str):
+    def process(self, input: str) -> None:
         direction, units = input.split(maxsplit=2)
         units = int(units)
         if direction == "forward":
@@ -20,6 +20,5 @@ class Part2(Solver):
         else:
             raise Exception("Unhandled direction!")
 
-    def finish(self):
-        product = self.horizontal * self.depth
-        print(f"Result: {product} ({self.horizontal}, {self.depth})")
+    def finish(self) -> int:
+        return self.horizontal * self.depth
