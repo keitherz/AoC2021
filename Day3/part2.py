@@ -48,7 +48,7 @@ def get_rating(reports: List[str], type: RatingType) -> int:
     rating: int = None
     index: int = 0
 
-    while rating == None:
+    while rating is None:
         reports_list = segregate_reports(reports, index)
         reports = get_reports_for_rating_type(reports_list, type)
 
